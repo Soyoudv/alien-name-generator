@@ -20,18 +20,11 @@ for rcomp in radical_comp:
     for v in voyelle:
         radical_tab.append(rcomp.replace("-",v,1))
 
-# print(prefixe_tab)
-# print(suffixe_tab)
-# print(radical_tab)
-
 def new_alien_name(min_s, max_s):
     if (min_s != max_s):
-        # print("min_x dif max_s", end =" ")
         snumber=random.randrange(min_s, max_s+1)-2
     else:
-        # print("les memes donc ez", end =" ")
         snumber=min_s
-    # print("snumber choisi ",snumber, end =" ")
 
     prefixe=prefixe_tab[random.randrange(0,len(prefixe_tab))]
     radical=radical_tab[random.randrange(0,len(radical_tab))]
@@ -57,6 +50,3 @@ def aliens(n,min_s,max_s): # size should be 2 or more
         tab[j] = new_alien_name(min_s, max_s)
 
 aliens(100,2,3)
-
-# while new_alien_name(4) != "baboubaglob":
-#     print("pas de baboubaglob")
