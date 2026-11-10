@@ -1,10 +1,10 @@
 import random
 
-prefixe_comp=["zgl-","zb-","zd-","b-","z","g-","gl-","bl-","gz-","bz-"]
+prefixe_comp=["zgl-","zb-","zd-","b-","z","g-","gl-","bl-","gz-","bz-","-"]
 suffixe_comp=["b-","g-","l-"]
 radical_comp=["b-x","g-x","l-x","gl-b","bl-b","gl-x","bl-x"]
 
-voyelle=["a","ou","i","o","u"]
+voyelle=["a","ou","i","o","u","oo"]
 
 prefixe_tab=[]
 suffixe_tab=[]
@@ -39,7 +39,8 @@ def new_alien_name(min_s, max_s):
             name+=suffixe_tab[random.randrange(0,len(suffixe_tab))]
         thing = name+radical
 
-    print(thing, end =" ")
+    print(thing)
+    # print(thing, end =" ")
     return thing
 
 def aliens(n,min_s,max_s): # size should be 2 or more
@@ -49,6 +50,6 @@ def aliens(n,min_s,max_s): # size should be 2 or more
     for j in range(len(tab)): # generation des noms
         tab[j] = new_alien_name(min_s, max_s)
 
-aliens(100,2,3)
+aliens(100,2,5)
 
 print()
