@@ -50,3 +50,5 @@ def aliens(n,min_s,max_s): # size should be 2 or more
         tab[j] = new_alien_name(min_s, max_s)
 
 aliens(100,2,3)
+
+print()
